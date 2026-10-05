@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
 
-export function useInView<T extends HTMLElement>(threshold = 0.35) {
+export function useInView<T extends HTMLElement>(threshold = 0.35, onEnter?: () => void) {
   const ref = useRef<T>(null)
+  const enterRef = useRef(onEnter)
+  enterRef.current = onEnter
 
   useEffect(() => {
     const node = ref.current
@@ -11,7 +13,7 @@ export function useInView<T extends HTMLElement>(threshold = 0.35) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          node.dataset.inView = 'true'
+          enterRef.current?.()
           observer.disconnect()
         }
       },
