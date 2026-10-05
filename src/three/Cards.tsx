@@ -3,19 +3,12 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { MathUtils } from 'three'
 import type { Group } from 'three'
 import { scene } from './palette'
-
-export const messages = [
-  'You called on me before I raised my hand.',
-  'You kept my work. I still think about that.',
-  'You let me be wrong in public and survive it.',
-  'You remembered my name in the second week.',
-  'You stayed behind. I noticed, eventually.',
-]
+import { messages } from './messages'
 
 type CardsSceneProps = {
   reduced: boolean
   selected: number
-  onSelect: (index: number) => void
+  onSelect?: (index: number) => void
 }
 
 const SPREAD = 0.74
@@ -83,7 +76,7 @@ export function CardsScene({ reduced, selected, onSelect }: CardsSceneProps) {
             <mesh
               onClick={(event) => {
                 event.stopPropagation()
-                onSelect(i)
+                onSelect?.(i)
               }}
               onPointerOver={(event) => {
                 event.stopPropagation()

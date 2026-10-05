@@ -3,7 +3,10 @@ import { useEffect, useRef } from 'react'
 export function useInView<T extends HTMLElement>(threshold = 0.35, onEnter?: () => void) {
   const ref = useRef<T>(null)
   const enterRef = useRef(onEnter)
-  enterRef.current = onEnter
+
+  useEffect(() => {
+    enterRef.current = onEnter
+  }, [onEnter])
 
   useEffect(() => {
     const node = ref.current

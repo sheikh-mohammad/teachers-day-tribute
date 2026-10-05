@@ -1,10 +1,10 @@
 import { Canvas } from '@react-three/fiber'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useInView } from '../lib/useInView'
 import { useReducedMotion } from '../lib/useReducedMotion'
 import { scene } from './palette'
 import { BookScene } from './Book'
-import { CardsScene, messages } from './Cards'
+import { CardsScene } from './Cards'
 import { BloomScene } from './Bloom'
 
 export type SceneKind = 'book' | 'cards' | 'bloom'
@@ -23,8 +23,6 @@ type SceneProps = {
 
 export function Scene({ kind, selected = 0, onSelect }: SceneProps) {
   const [live, setLive] = useState(false)
-  const enterRef = useRef(onSelect)
-  enterRef.current = onSelect
   const hostRef = useInView<HTMLDivElement>(0.15, () => setLive(true))
   const reduced = useReducedMotion()
 
@@ -44,6 +42,7 @@ export function Scene({ kind, selected = 0, onSelect }: SceneProps) {
   return (
     <div className="scene" ref={hostRef}>
       <Canvas
+        loading={<div className="scene__loading" aria-hidden="true" />}
         dpr={[1, 1.6]}
         frameloop={live ? 'always' : 'never'}
         gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
@@ -55,13 +54,9 @@ export function Scene({ kind, selected = 0, onSelect }: SceneProps) {
         <directionalLight position={[-3.5, 2.4, -2]} intensity={0.45} color={scene.accent} />
 
         {kind === 'book' && <BookScene reduced={reduced} />}
-        {kind === 'cards' && (
-          <CardsScene reduced={reduced} selected={selected} onSelect={i => enterRef.current?.(i)} />
-        )}
+        {kind === 'cards' && <CardsScene reduced={reduced} selected={selected} onSelect={onSelect} />}
         {kind === 'bloom' && <BloomScene reduced={reduced} />}
       </Canvas>
     </div>
   )
 }
-
-export { messages }

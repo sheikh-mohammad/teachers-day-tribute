@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Scene, messages } from '../three/Scene'
+import { Scene } from '../three/Scene'
+import { messages } from '../three/messages'
 
 export function CardsChapter() {
   const [active, setActive] = useState(0)
