@@ -1,0 +1,19 @@
+{
+  "scanned": "2026-10-05",
+  "framework": "Vite 8 + React 19 (app bootstrap in src/main.tsx, no router)",
+  "fontStack": "Instrument Serif (display) + Switzer (body) + Commit Mono (outlier) — Google Fonts + Fontshare, loaded in index.html",
+  "palette": "custom OKLCH custom properties in src/tokens.css; mirrored to WebGL in src/three/palette.ts",
+  "motion": "motion-on for 3D only — react-three-fiber useFrame. No CSS animation library installed; reveal state uses IntersectionObserver",
+  "spacing": "custom 4pt scale as --space-* custom properties in src/tokens.css",
+  "lint": "oxlint",
+  "3d": "three 0.186 + @react-three/fiber 9 + @react-three/drei 10 (drei installed, currently unused)",
+  "notes": "The initial Vite scaffold shipped index.css with a #000/#fff dark-mode block and system-ui fonts. Both were replaced wholesale by the token system.",
+  "preserved": [],
+  "introduced": [
+    "macrostructure",
+    "token system",
+    "type scale",
+    "motion tokens",
+    "mobile floor at 320px"
+  ]
+}
