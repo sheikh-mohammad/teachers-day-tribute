@@ -39,7 +39,7 @@
   min-width: 0;
   aspect-ratio: 4 / 3;
   border-radius: calc(var(--space-lg) * 2);
-  background: var(--color-paper-2);
+  background: var(--color-gold-soft);
   border: 1px solid var(--color-rule);
   overflow: hidden;
 }
@@ -72,7 +72,7 @@
 
 .headline em {
   font-style: normal;
-  color: var(--color-accent-ink);
+  color: var(--color-rose);
 }
 
 .headline--section {
@@ -127,7 +127,7 @@
 }
 
 .pair__side--her {
-  border-block-start-color: var(--color-accent);
+  border-block-start-color: var(--color-rose);
 }
 
 .pair__side--him {
@@ -155,64 +155,89 @@
 
 /* Letter */
 
-/* Cards · message deck under the 3D fan */
+/* Festive warmth */
 
-.deck {
+.festive {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin: 0;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: var(--color-gold-soft);
+  color: var(--color-accent-ink);
+  font-family: var(--font-outlier);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+/* Ledger · what they gave us */
+
+.ledger {
+  padding-block: var(--space-3xl);
+}
+
+.ledger__head {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xs);
-  margin: var(--space-sm) 0 0;
+  gap: var(--space-md);
+  margin-block-end: var(--space-xl);
+  max-width: 44ch;
+}
+
+.ledger__list {
+  display: grid;
+  gap: var(--space-xl);
+  margin: 0;
   padding: 0;
   list-style: none;
-  width: 100%;
-  max-width: 34rem;
+  grid-template-columns: minmax(0, 1fr);
 }
 
-.deck__card {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-sm);
-  width: 100%;
-  padding: var(--space-xs) var(--space-sm);
-  min-height: 44px;
-  border: 1px solid transparent;
-  border-radius: var(--space-xs);
-  background: transparent;
-  color: var(--color-muted);
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  line-height: 1.5;
-  text-align: start;
-  cursor: pointer;
-  transition:
-    color var(--dur-short) var(--ease-out),
-    border-color var(--dur-short) var(--ease-out),
-    background-color var(--dur-short) var(--ease-out);
+@media (min-width: 48rem) {
+  .ledger__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-xl) var(--space-2xl);
+  }
 }
 
-.deck__mark {
-  flex: none;
-  width: 6px;
-  height: 6px;
-  margin-block-start: 0.5em;
+@media (min-width: 75rem) {
+  .ledger__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.ledger__item {
+  min-width: 0;
+  display: grid;
+  gap: var(--space-2xs);
+  padding-block-start: var(--space-sm);
+  border-block-start: 1px solid var(--color-rule);
+}
+
+.ledger__bullet {
+  width: 7px;
+  height: 7px;
+  margin-block-end: var(--space-xs);
   border-radius: 50%;
-  background: var(--color-rule);
-  transition: background-color var(--dur-short) var(--ease-out);
+  background: var(--color-rose);
 }
 
-.deck__card:hover {
-  color: var(--color-ink);
-  border-color: var(--color-rule);
+.ledger__who {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }
 
-.deck__card.is-active {
-  color: var(--color-ink);
-  background: var(--color-paper-2);
-  border-color: var(--color-rule);
-}
-
-.deck__card.is-active .deck__mark {
-  background: var(--color-accent);
+.ledger__what {
+  color: var(--color-ink-soft);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  max-width: 34ch;
 }
 
 .scene {
@@ -229,6 +254,195 @@
   position: absolute;
   inset: 0;
   background: var(--color-paper-2);
+}
+
+/* Hero · greeting */
+
+.hero {
+  display: grid;
+  gap: var(--space-2xl) var(--space-3xl);
+  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 60rem) {
+  .hero {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  }
+}
+
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  min-width: 0;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-block-start: var(--space-xs);
+}
+
+.hero__seal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  justify-self: center;
+}
+
+.hero__seal svg {
+  display: block;
+  animation: seal-turn 48s linear infinite;
+}
+
+.hero__seal-text {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+}
+
+@keyframes seal-turn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__seal svg {
+    animation: none;
+  }
+}
+
+.u-cta--solid {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.u-cta--solid:hover {
+  background: var(--color-rose-deep);
+  border-color: var(--color-rose-deep);
+  color: var(--color-paper);
+}
+
+/* Wishes · shuffle control and flip cards */
+
+.split__hint {
+  position: absolute;
+  inset-block-end: var(--space-sm);
+  inset-inline-end: var(--space-sm);
+  margin: 0;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--color-paper);
+  color: var(--color-muted);
+  font-family: var(--font-outlier);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.shuffle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.shuffle__count {
+  color: var(--color-muted);
+  font-family: var(--font-outlier);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.wishes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin: var(--space-sm) 0 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 34rem;
+}
+
+.wishes li {
+  min-width: 0;
+}
+
+.wishes__card {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: var(--color-ink-soft);
+  text-align: start;
+  cursor: pointer;
+  perspective: 900px;
+}
+
+.wishes__face {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  min-height: 44px;
+  padding: var(--space-xs) var(--space-sm);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--space-xs);
+  line-height: 1.5;
+  transition:
+    opacity var(--dur-short) var(--ease-out),
+    transform var(--dur-short) var(--ease-out);
+}
+
+.wishes__face--back {
+  background: var(--color-gold-soft);
+  color: var(--color-accent-ink);
+  font-family: var(--font-outlier);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.wishes__face--front {
+  position: absolute;
+  inset: 0;
+  background: var(--color-paper-2);
+  color: var(--color-ink-soft);
+  opacity: 0;
+  transform: rotateX(-14deg);
+}
+
+.wishes__card.is-turned .wishes__face--back {
+  opacity: 0;
+}
+
+.wishes__card.is-turned .wishes__face--front {
+  opacity: 1;
+  transform: none;
+}
+
+.wishes__card:hover .wishes__face--back {
+  background: var(--color-paper-3);
+}
+
+.wishes__card.is-turned:hover .wishes__face--front {
+  background: var(--color-paper-3);
+}
+
+.wishes__card:focus-visible {
+  outline-offset: 4px;
 }
 
 .letter {
@@ -280,6 +494,15 @@
 
 .closing__mark {
   margin-block-end: var(--space-2xs);
+}
+
+.closing__festive {
+  margin: 0;
+  font-family: var(--font-outlier);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent-ink);
 }
 
 .closing__line {

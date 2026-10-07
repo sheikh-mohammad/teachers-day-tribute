@@ -9,9 +9,9 @@ type BloomSceneProps = {
 }
 
 const rings = [
-  { count: 14, radius: 0.66, y: 0, tilt: -0.16, tone: scene.accentDeep, w: 0.15, d: 0.5 },
-  { count: 12, radius: 0.48, y: 0.14, tilt: -0.34, tone: scene.accent, w: 0.14, d: 0.44 },
-  { count: 10, radius: 0.3, y: 0.25, tilt: -0.56, tone: scene.accent, w: 0.12, d: 0.34 },
+  { count: 16, radius: 0.72, y: -0.02, tilt: -0.14, tone: scene.accent, w: 0.16, d: 0.54 },
+  { count: 13, radius: 0.5, y: 0.16, tilt: -0.36, tone: scene.rose, w: 0.14, d: 0.44 },
+  { count: 10, radius: 0.3, y: 0.28, tilt: -0.6, tone: scene.goldSoft, w: 0.12, d: 0.34 },
 ]
 
 export function BloomScene({ reduced }: BloomSceneProps) {
@@ -77,7 +77,7 @@ export function BloomScene({ reduced }: BloomSceneProps) {
               <group
                 key={`${ringIndex}-${i}`}
                 ref={(node) => {
-                  petals.current[ringIndex * 14 + i] = node
+                  petals.current[ringIndex * 16 + i] = node
                 }}
                 rotation={[0, angle, 0]}
                 position={[Math.sin(angle) * ring.radius, ring.y, Math.cos(angle) * ring.radius]}
@@ -97,9 +97,14 @@ export function BloomScene({ reduced }: BloomSceneProps) {
           }),
         )}
 
-        <mesh position={[0, 0.31, 0]}>
-          <sphereGeometry args={[0.11, 20, 16]} />
-          <meshStandardMaterial color={scene.accentInk} roughness={0.72} />
+        <mesh position={[0, 0.34, 0]}>
+          <sphereGeometry args={[0.13, 20, 16]} />
+          <meshStandardMaterial
+            color={scene.accent}
+            roughness={0.55}
+            emissive={scene.accentDeep}
+            emissiveIntensity={0.28}
+          />
         </mesh>
       </group>
     </group>

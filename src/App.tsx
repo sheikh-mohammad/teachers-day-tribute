@@ -1,8 +1,8 @@
 import { Nav } from './components/Nav'
 import { Hero } from './sections/Hero'
-import { CardsChapter } from './sections/CardsChapter'
-import { Letter } from './sections/Letter'
+import { Wishes } from './sections/Wishes'
 import { Bloom } from './sections/Bloom'
+import { Letter } from './sections/Letter'
 import { Closing } from './sections/Closing'
 import './app.css'
 
@@ -13,7 +13,7 @@ export default function App() {
 
       <main id="top">
         <Hero />
-        <CardsChapter />
+        <Wishes />
         <Bloom />
         <Letter />
       </main>

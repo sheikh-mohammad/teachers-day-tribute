@@ -3,9 +3,9 @@ import { BloomMark } from './BloomMark'
 import './nav.css'
 
 const links = [
-  { href: '#book', label: 'The Book' },
-  { href: '#cards', label: 'The Cards' },
-  { href: '#bloom', label: 'The Bloom' },
+  { href: '#wishes', label: 'The Wishes' },
+  { href: '#bloom', label: 'The Flowers' },
+  { href: '#gave', label: 'What You Gave' },
   { href: '#letter', label: 'The Letter' },
 ]
 
@@ -48,9 +48,9 @@ export function Nav() {
       </div>
 
       <div className="nav__pill">
-        <a className="nav__wordmark" href="#top" aria-label="For the ones who taught us, back to top">
+        <a className="nav__wordmark" href="#top" aria-label="Happy Teachers' Day, back to top">
           <BloomMark size={20} petals={10} />
-          <span>For the Ones Who Taught Us</span>
+          <span>Happy Teachers&rsquo; Day</span>
         </a>
 
         <nav className="nav__rail" aria-label="Sections">
@@ -62,7 +62,7 @@ export function Nav() {
         </nav>
 
         <a className="u-cta nav__cta" href="#letter">
-          Open the letter
+          Read the letter
         </a>
       </div>
     </div>

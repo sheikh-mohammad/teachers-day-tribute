@@ -6,18 +6,22 @@
  */
 
 :root {
-  --color-paper: oklch(96.4% 0.009 210);
-  --color-paper-2: oklch(93.5% 0.013 208);
-  --color-paper-3: oklch(89.5% 0.017 206);
-  --color-rule: oklch(84% 0.02 205);
-  --color-neutral: oklch(56% 0.02 240);
-  --color-muted: oklch(45% 0.028 252);
-  --color-ink: oklch(24% 0.042 268);
-  --color-ink-soft: oklch(36% 0.028 262);
-  --color-accent: oklch(71% 0.163 68);
-  --color-accent-ink: oklch(47% 0.112 60);
-  --color-stem: oklch(52% 0.086 168);
-  --color-focus: oklch(47% 0.112 60);
+  --color-paper: oklch(96.2% 0.019 72);
+  --color-paper-2: oklch(92.6% 0.028 69);
+  --color-paper-3: oklch(87.8% 0.038 66);
+  --color-rule: oklch(81.5% 0.044 62);
+  --color-neutral: oklch(54% 0.032 348);
+  --color-muted: oklch(45% 0.042 350);
+  --color-ink: oklch(26.5% 0.058 338);
+  --color-ink-soft: oklch(37.5% 0.046 348);
+  --color-accent: oklch(78.5% 0.152 80);
+  --color-accent-ink: oklch(47% 0.108 70);
+  --color-rose: oklch(54.5% 0.168 16);
+  --color-rose-deep: oklch(44% 0.15 14);
+  --color-stem: oklch(46.5% 0.092 152);
+  --color-stem-deep: oklch(37% 0.08 152);
+  --color-gold-soft: oklch(88% 0.082 84);
+  --color-focus: oklch(47% 0.108 70);
 
   --font-display: "Instrument Serif", "Iowan Old Style", ui-serif, Georgia, serif;
   --font-body: "Switzer", ui-sans-serif, system-ui, sans-serif;
