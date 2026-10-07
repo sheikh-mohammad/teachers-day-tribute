@@ -39,7 +39,7 @@
   min-width: 0;
   aspect-ratio: 4 / 3;
   border-radius: calc(var(--space-lg) * 2);
-  background: var(--color-mint-soft);
+  background: var(--grad-emerald-soft);
   border: 1px solid var(--color-rule);
   overflow: hidden;
 }
@@ -72,7 +72,17 @@
 
 .headline em {
   font-style: normal;
-  color: var(--color-accent);
+  color: var(--color-accent-deep);
+}
+
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  .headline em {
+    background: var(--grad-emerald);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .headline--section {
@@ -164,7 +174,7 @@
   margin: 0;
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
-  background: var(--color-mint-soft);
+  background: var(--grad-emerald-soft);
   color: var(--color-accent-ink);
   font-family: var(--font-outlier);
   font-size: var(--text-2xs);
@@ -223,7 +233,7 @@
   height: 7px;
   margin-block-end: var(--space-xs);
   border-radius: 50%;
-  background: var(--color-accent);
+  background: var(--grad-emerald);
 }
 
 .ledger__who {
@@ -319,12 +329,16 @@
 }
 
 .u-cta--solid {
-  background: var(--color-ink);
+  background: var(--grad-emerald-deep);
+  background-size: 160% 160%;
+  background-position: 0% 50%;
   color: var(--color-paper);
 }
 
 .u-cta--solid:hover {
-  background: var(--color-accent-deep);
+  background: var(--grad-emerald-deep);
+  background-size: 160% 160%;
+  background-position: 100% 50%;
   border-color: var(--color-accent-deep);
   color: var(--color-paper);
 }
@@ -406,7 +420,7 @@
 }
 
 .wishes__face--back {
-  background: var(--color-mint-soft);
+  background: var(--grad-emerald-soft);
   color: var(--color-accent-ink);
   font-family: var(--font-outlier);
   font-size: var(--text-xs);
@@ -434,7 +448,7 @@
 }
 
 .wishes__card:hover .wishes__face--back {
-  background: var(--color-paper-3);
+  background: var(--color-mint);
 }
 
 .wishes__card.is-turned:hover .wishes__face--front {
