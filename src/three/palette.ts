@@ -10,7 +10,8 @@ const fromLinear = (v: number) =>
 
 const clamp01 = (v: number) => Math.min(Math.max(v, 0), 1)
 
-export function oklchToRgb([l, c, h]: Oklch): [number, number, number] {
+export function oklchToRgb([l0, c, h]: Oklch): [number, number, number] {
+  const l = l0 / 100
   const rad = (h * Math.PI) / 180
   const a = c * Math.cos(rad)
   const b = c * Math.sin(rad)

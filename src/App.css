@@ -77,7 +77,7 @@
 
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
   .headline em {
-    background: var(--grad-emerald);
+    background: var(--grad-emerald-text);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -178,7 +178,7 @@
 
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
   .kicker {
-    background: var(--grad-emerald);
+    background: var(--grad-emerald-ink);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -542,7 +542,7 @@
 
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
   .closing__festive {
-    background: var(--grad-emerald);
+    background: var(--grad-emerald-text);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
