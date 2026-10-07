@@ -38,7 +38,7 @@ export function BloomMark({ size = 28, petals = 12, className }: BloomMarkProps)
           )
         })
       })}
-      <circle cx="24" cy="24" r="3.4" fill="var(--color-accent-ink)" />
+      <circle cx="24" cy="24" r="3.4" fill="var(--color-gold)" />
     </svg>
   )
 }
