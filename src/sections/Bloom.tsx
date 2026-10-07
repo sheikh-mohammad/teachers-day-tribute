@@ -32,6 +32,7 @@ export function Bloom() {
     <>
       <section className="u-shell split" id="bloom">
         <div className="split__text">
+          <p className="kicker">Happy Teachers&rsquo; Day</p>
           <h2 className="headline headline--section">Marigolds, because marigolds.</h2>
           <p className="body">
             In every classroom we grew up in, the flower was a marigold — cheap,
@@ -72,6 +73,7 @@ export function Bloom() {
 
       <section className="u-shell ledger" id="gave">
         <div className="ledger__head">
+          <p className="kicker">Happy Teachers&rsquo; Day</p>
           <h2 className="headline headline--section">What they actually gave us.</h2>
           <p className="body">
             Nobody hands you a list when you leave school. It arrives much later, in

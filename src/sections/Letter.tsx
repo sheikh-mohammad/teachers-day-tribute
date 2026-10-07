@@ -2,6 +2,7 @@ export function Letter() {
   return (
     <section className="u-shell letter" id="letter">
       <div className="letter__head">
+        <p className="kicker">Happy Teachers&rsquo; Day</p>
         <h2 className="headline headline--section">The letter I should have written.</h2>
       </div>
 

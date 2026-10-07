@@ -43,6 +43,7 @@ export function Wishes() {
       </div>
 
       <div className="split__text">
+        <p className="kicker">Happy Teachers&rsquo; Day</p>
         <h2 className="headline headline--section">
           A handful of things we should have said.
         </h2>
