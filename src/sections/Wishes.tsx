@@ -19,7 +19,7 @@ export function Wishes() {
     wishes.map((_, i) => i),
   )
   const [front, setFront] = useState(0)
-  const [turn, setTurn] = useState<string[]>([])
+  const [turn, setTurn] = useState<number[]>([])
 
   const deal = useCallback(() => {
     setOrder((prev) => {
