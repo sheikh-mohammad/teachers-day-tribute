@@ -39,7 +39,7 @@
   min-width: 0;
   aspect-ratio: 4 / 3;
   border-radius: calc(var(--space-lg) * 2);
-  background: var(--color-gold-soft);
+  background: var(--color-mint-soft);
   border: 1px solid var(--color-rule);
   overflow: hidden;
 }
@@ -72,7 +72,7 @@
 
 .headline em {
   font-style: normal;
-  color: var(--color-rose);
+  color: var(--color-accent);
 }
 
 .headline--section {
@@ -127,11 +127,11 @@
 }
 
 .pair__side--her {
-  border-block-start-color: var(--color-rose);
+  border-block-start-color: var(--color-accent);
 }
 
 .pair__side--him {
-  border-block-start-color: var(--color-stem);
+  border-block-start-color: var(--color-teal);
 }
 
 .pair__head {
@@ -164,7 +164,7 @@
   margin: 0;
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
-  background: var(--color-gold-soft);
+  background: var(--color-mint-soft);
   color: var(--color-accent-ink);
   font-family: var(--font-outlier);
   font-size: var(--text-2xs);
@@ -223,7 +223,7 @@
   height: 7px;
   margin-block-end: var(--space-xs);
   border-radius: 50%;
-  background: var(--color-rose);
+  background: var(--color-accent);
 }
 
 .ledger__who {
@@ -324,8 +324,8 @@
 }
 
 .u-cta--solid:hover {
-  background: var(--color-rose-deep);
-  border-color: var(--color-rose-deep);
+  background: var(--color-accent-deep);
+  border-color: var(--color-accent-deep);
   color: var(--color-paper);
 }
 
@@ -406,7 +406,7 @@
 }
 
 .wishes__face--back {
-  background: var(--color-gold-soft);
+  background: var(--color-mint-soft);
   color: var(--color-accent-ink);
   font-family: var(--font-outlier);
   font-size: var(--text-xs);

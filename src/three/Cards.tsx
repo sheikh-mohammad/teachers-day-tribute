@@ -97,7 +97,7 @@ export function CardsScene({ reduced, selected, onSelect }: CardsSceneProps) {
             <mesh position={[0, CARD_H / 2 - 0.17, 0.024]}>
               <circleGeometry args={[0.075, 24]} />
               <meshStandardMaterial
-                color={i % 3 === 0 ? scene.rose : scene.accent}
+                color={i % 3 === 0 ? scene.teal : i % 3 === 1 ? scene.accent : scene.gold}
                 roughness={0.5}
                 emissive={scene.accentDeep}
                 emissiveIntensity={0.22}

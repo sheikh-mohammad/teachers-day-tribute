@@ -10,8 +10,8 @@ type BloomSceneProps = {
 
 const rings = [
   { count: 16, radius: 0.72, y: -0.02, tilt: -0.14, tone: scene.accent, w: 0.16, d: 0.54 },
-  { count: 13, radius: 0.5, y: 0.16, tilt: -0.36, tone: scene.rose, w: 0.14, d: 0.44 },
-  { count: 10, radius: 0.3, y: 0.28, tilt: -0.6, tone: scene.goldSoft, w: 0.12, d: 0.34 },
+  { count: 13, radius: 0.5, y: 0.16, tilt: -0.36, tone: scene.teal, w: 0.14, d: 0.44 },
+  { count: 10, radius: 0.3, y: 0.28, tilt: -0.6, tone: scene.mint, w: 0.12, d: 0.34 },
 ]
 
 export function BloomScene({ reduced }: BloomSceneProps) {
@@ -100,10 +100,10 @@ export function BloomScene({ reduced }: BloomSceneProps) {
         <mesh position={[0, 0.34, 0]}>
           <sphereGeometry args={[0.13, 20, 16]} />
           <meshStandardMaterial
-            color={scene.accent}
-            roughness={0.55}
-            emissive={scene.accentDeep}
-            emissiveIntensity={0.28}
+            color={scene.gold}
+            roughness={0.5}
+            emissive={scene.gold}
+            emissiveIntensity={0.22}
           />
         </mesh>
       </group>

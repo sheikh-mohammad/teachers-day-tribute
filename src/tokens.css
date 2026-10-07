@@ -1,27 +1,47 @@
-/* Hallmark · macrostructure: Split Studio · theme: custom (chalk-mist + marigold)
+/* Hallmark · macrostructure: Split Studio · theme: custom (chalk-mist + emerald gradient)
  * genre: editorial · nav: N5 Floating pill · footer: Ft6 Letter close
- * enrichment: E3 hand-built 3D (react-three-fiber book / cards / bloom)
+ * enrichment: E3 hand-built 3D (react-three-fiber cards / bloom)
  * audience: a teacher opening this on a phone · use: read and feel it · tone: warm, restrained
+ * axes: light paper · high-contrast serif · green accent (emerald → teal)
  * pre-emit critique: P5 H4 E4 S5 R5 V4
  */
 
 :root {
-  --color-paper: oklch(96.2% 0.019 72);
-  --color-paper-2: oklch(92.6% 0.028 69);
-  --color-paper-3: oklch(87.8% 0.038 66);
-  --color-rule: oklch(81.5% 0.044 62);
-  --color-neutral: oklch(54% 0.032 348);
-  --color-muted: oklch(45% 0.042 350);
-  --color-ink: oklch(26.5% 0.058 338);
-  --color-ink-soft: oklch(37.5% 0.046 348);
-  --color-accent: oklch(78.5% 0.152 80);
-  --color-accent-ink: oklch(47% 0.108 70);
-  --color-rose: oklch(54.5% 0.168 16);
-  --color-rose-deep: oklch(44% 0.15 14);
-  --color-stem: oklch(46.5% 0.092 152);
-  --color-stem-deep: oklch(37% 0.08 152);
-  --color-gold-soft: oklch(88% 0.082 84);
-  --color-focus: oklch(47% 0.108 70);
+  --color-paper: oklch(96.4% 0.016 155);
+  --color-paper-2: oklch(93.6% 0.026 152);
+  --color-paper-3: oklch(89.4% 0.038 150);
+  --color-rule: oklch(84.5% 0.042 148);
+  --color-neutral: oklch(52% 0.045 168);
+  --color-muted: oklch(44% 0.05 170);
+  --color-ink: oklch(26% 0.042 178);
+  --color-ink-soft: oklch(37% 0.038 175);
+  --color-accent: oklch(64% 0.145 157);
+  --color-accent-deep: oklch(52% 0.122 160);
+  --color-accent-ink: oklch(45% 0.104 162);
+  --color-teal: oklch(69% 0.108 186);
+  --color-teal-deep: oklch(55% 0.095 190);
+  --color-mint: oklch(88% 0.068 156);
+  --color-mint-soft: oklch(92.5% 0.045 154);
+  --color-gold: oklch(84% 0.115 78);
+  --color-focus: oklch(52% 0.122 160);
+
+  --grad-emerald: linear-gradient(
+    120deg,
+    oklch(73% 0.152 148) 0%,
+    oklch(64% 0.145 159) 46%,
+    oklch(61% 0.115 186) 100%
+  );
+  --grad-emerald-deep: linear-gradient(
+    135deg,
+    oklch(52% 0.122 157) 0%,
+    oklch(41% 0.092 172) 100%
+  );
+  --grad-emerald-soft: linear-gradient(
+    160deg,
+    oklch(93.5% 0.038 154) 0%,
+    oklch(89.5% 0.058 150) 52%,
+    oklch(87.5% 0.052 178) 100%
+  );
 
   --font-display: "Instrument Serif", "Iowan Old Style", ui-serif, Georgia, serif;
   --font-body: "Switzer", ui-sans-serif, system-ui, sans-serif;
