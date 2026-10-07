@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-08",
+    "macrostructure": "Split Studio",
+    "theme": "custom (chalk-mist + emerald gradient)",
+    "nav": "N5 Floating pill",
+    "footer": "Ft6 Letter close",
+    "enrichment": "E3 hand-built 3D (react-three-fiber cards / bloom)",
+    "axes": {
+      "paperBand": "light",
+      "displayStyle": "high-contrast-serif (Instrument Serif, roman)",
+      "accentHue": "green (emerald oklch hue 157, gradient stops emerald to teal)"
+    },
+    "brief": "Teachers Day Tribute - emerald gradient refresh, more short Happy Teachers' Day greetings"
+  },
+  {
     "date": "2026-10-05",
     "macrostructure": "Split Studio",
     "theme": "custom (chalk-mist + marigold)",
@@ -11,6 +25,6 @@
       "displayStyle": "high-contrast-serif (Instrument Serif, roman)",
       "accentHue": "warm (marigold oklch hue 68) with eucalyptus stem as the single second"
     },
-    "brief": "Teachers Day Tribute · personal tribute site for teachers"
+    "brief": "Teachers Day Tribute - personal tribute site for teachers"
   }
 ]
