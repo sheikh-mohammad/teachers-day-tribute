@@ -576,3 +576,194 @@
   gap: var(--space-sm);
   margin-block-start: var(--space-sm);
 }
+
+/* Ribbon · greeting band */
+
+.ribbon {
+  margin-block: var(--space-xl);
+  margin-inline: calc(-1 * max(var(--space-sm), env(safe-area-inset-left)));
+  padding-block: var(--space-md);
+  background: var(--grad-emerald-deep);
+  border-block: 1px solid var(--color-accent-deep);
+  overflow: hidden;
+}
+
+.ribbon__track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: ribbon-run 34s linear infinite;
+}
+
+.ribbon__item {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: 1.25;
+  color: var(--color-paper);
+  white-space: nowrap;
+  margin-inline-end: var(--space-lg);
+}
+
+.ribbon__dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  margin-inline-end: var(--space-lg);
+}
+
+@keyframes ribbon-run {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ribbon__track {
+    animation: none;
+  }
+}
+
+/* School day · timetable rail */
+
+.day {
+  padding-block: var(--space-3xl);
+}
+
+.day__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-block-end: var(--space-xl);
+  max-width: 46ch;
+}
+
+.day__list {
+  position: relative;
+  display: grid;
+  gap: var(--space-xl);
+  margin: 0;
+  padding: 0 0 0 var(--space-xl);
+  list-style: none;
+  border-inline-start: 1px solid var(--color-rule);
+}
+
+.day__row {
+  position: relative;
+  display: grid;
+  gap: var(--space-2xs);
+  min-width: 0;
+}
+
+.day__row::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: calc(-1 * var(--space-xl) - 5px);
+  inset-block-start: 0.3rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--grad-emerald);
+}
+
+.day__time {
+  font-family: var(--font-outlier);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  color: var(--color-accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.day__what {
+  font-family: var(--font-display);
+  font-size: var(--text-md);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+  max-width: 44ch;
+}
+
+@media (min-width: 48rem) {
+  .day__row {
+    grid-template-columns: 6rem minmax(0, 1fr);
+    gap: var(--space-lg);
+    align-items: baseline;
+  }
+}
+
+/* Languages · greeting grid */
+
+.lang {
+  padding-block: var(--space-3xl);
+  border-block-start: 1px solid var(--color-rule);
+}
+
+.lang__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-block-end: var(--space-xl);
+  max-width: 46ch;
+}
+
+.lang__grid {
+  display: grid;
+  gap: var(--space-xl) var(--space-2xl);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 42rem) {
+  .lang__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 68rem) {
+  .lang__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.lang__cell {
+  display: grid;
+  gap: var(--space-2xs);
+  align-content: start;
+  min-width: 0;
+  padding-block-start: var(--space-sm);
+  border-block-start: 1px solid var(--color-rule);
+}
+
+.lang__phrase {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+  overflow-wrap: break-word;
+}
+
+.lang__phrase--lead {
+  color: var(--color-accent-deep);
+}
+
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  .lang__phrase--lead {
+    background: var(--grad-emerald-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.lang__name {
+  font-family: var(--font-outlier);
+  font-size: var(--text-2xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-neutral);
+}

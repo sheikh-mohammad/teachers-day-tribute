@@ -1,7 +1,10 @@
 import { Nav } from './components/Nav'
 import { Hero } from './sections/Hero'
+import { Ribbon } from './sections/Ribbon'
 import { Wishes } from './sections/Wishes'
 import { Bloom } from './sections/Bloom'
+import { SchoolDay } from './sections/SchoolDay'
+import { Languages } from './sections/Languages'
 import { Letter } from './sections/Letter'
 import { Closing } from './sections/Closing'
 import './app.css'
@@ -13,8 +16,11 @@ export default function App() {
 
       <main id="top">
         <Hero />
+        <Ribbon />
         <Wishes />
         <Bloom />
+        <SchoolDay />
+        <Languages />
         <Letter />
       </main>
 

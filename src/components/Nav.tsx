@@ -5,6 +5,7 @@ import './nav.css'
 const links = [
   { href: '#wishes', label: 'The Wishes' },
   { href: '#bloom', label: 'The Flowers' },
+  { href: '#day', label: 'The Day' },
   { href: '#gave', label: 'What You Gave' },
   { href: '#letter', label: 'The Letter' },
 ]
