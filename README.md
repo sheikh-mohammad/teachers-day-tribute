@@ -1,8 +1,9 @@
 # Teachers' Day Tribute
 
 An interactive 3D greeting for Teachers' Day, built with React, Vite, and three.js.
-Instead of a flat page, the tribute is a scene you move through: a book that opens,
-cards that flip, and flowers that bloom, each triggered by scroll or hover.
+Instead of a flat page, the tribute is a scene you move through: cards you turn,
+a marigold that blooms, and a letter at the end, with a greeting ribbon and a
+school-day timetable in between.
 
 ## Technology Stack
 
@@ -18,11 +19,13 @@ cards that flip, and flowers that bloom, each triggered by scroll or hover.
 
 ## Features
 
-- **Book animation** — the cover opens on scroll and pages turn with a soft bend.
-- **Card flips** — a grid of cards that rotate to reveal a message on the back.
+- **Wish cards** — a hand of cards you shuffle, then turn one at a time to read
+  each message.
 - **Flower bloom** — procedural petals that unfurl as the scene comes into view.
-- **One persistent canvas** — the animations share a single scene, so moving between
-  them stays smooth instead of remounting.
+- **Scenes that sleep** — every canvas stops rendering until it scrolls into view,
+  so the page stays light on low-end laptops.
+- **Typographic sections** — a gradient greeting ribbon, a school-day timetable,
+  greetings in ten languages, and the letter.
 
 ## Getting Started
 
@@ -48,15 +51,20 @@ Then open the local URL Vite prints, by default http://localhost:5173.
 
 ```
 src/
-├── assets/         # static assets imported by components
-├── three/          # 3D scenes and animation components
-│   ├── Book.tsx
-│   ├── Cards.tsx
-│   └── Flowers.tsx
-├── App.tsx         # page composition
-├── App.css         # page styles
-├── index.css       # global styles
-└── main.tsx        # entry point
+├── sections/        # page sections: hero, ribbon, wishes, bloom, day, languages, letter
+├── three/           # 3D scenes and animation components
+│   ├── Scene.tsx    # canvas host, lights and camera
+│   ├── Cards.tsx    # shuffleable wish cards
+│   ├── Bloom.tsx    # procedural marigold
+│   ├── palette.ts   # OKLCH palette mirrored for WebGL
+│   └── wishes.ts    # shared card messages
+├── components/      # nav and the bloom mark
+├── lib/             # useInView, useReducedMotion
+├── App.tsx          # page composition
+├── App.css          # page styles
+├── index.css        # global styles
+├── tokens.css       # design tokens (emerald gradient palette)
+└── main.tsx         # entry point
 public/             # files served as-is
 ```
 
