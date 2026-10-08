@@ -33,6 +33,10 @@ body {
   isolation: isolate;
 }
 
+section[id] {
+  scroll-margin-top: clamp(5.5rem, 12vh, 8rem);
+}
+
 h1,
 h2,
 h3 {

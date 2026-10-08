@@ -4,6 +4,8 @@ import { Ribbon } from './sections/Ribbon'
 import { Wishes } from './sections/Wishes'
 import { Bloom } from './sections/Bloom'
 import { SchoolDay } from './sections/SchoolDay'
+import { Board } from './sections/Board'
+import { ReportCard } from './sections/ReportCard'
 import { Languages } from './sections/Languages'
 import { Letter } from './sections/Letter'
 import { Closing } from './sections/Closing'
@@ -16,10 +18,12 @@ export default function App() {
 
       <main id="top">
         <Hero />
-        <Ribbon />
         <Wishes />
         <Bloom />
         <SchoolDay />
+        <Ribbon />
+        <Board />
+        <ReportCard />
         <Languages />
         <Letter />
       </main>

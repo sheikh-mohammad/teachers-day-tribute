@@ -48,9 +48,9 @@ export function Wishes() {
           A handful of things we should have said.
         </h2>
         <p className="body">
-          Happy Teachers&rsquo; Day. We each wrote one, shuffled them, and let you deal
-          them yourself — because handing someone a card politely is one thing, and making
-          them come and choose is closer to how a classroom actually feels.
+          We each wrote one, shuffled them, and let you deal them yourself — because
+          handing someone a card politely is one thing, and making them come and choose
+          is closer to how a classroom actually feels.
         </p>
 
         <div className="shuffle">
